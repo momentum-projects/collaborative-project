@@ -18,7 +18,7 @@ Once a user is a member of your site, they can create "cards." You may choose to
 - the border style ([here is an article on making cool borders with CSS](https://amethystwebsitedesign.com/decorative-borders-with-only-css-and-no-images/))
 - the font (from a predefined list; choose a set of fonts to bring in from [Google Fonts](https://fonts.google.com/))
 - the text alignment
-- an image to include (Note: uploading images to an API will require significantly more work. An recommended alternative is to use the [Unsplash API](https://unsplash.com/developers) on the front-end and store the image location (url) on the back-end.)
+- an image to include (Note: uploading images to an API will require significantly more work. An alternative is to use the [Unsplash API](https://unsplash.com/developers) on the front-end and store the image location (url) on the back-end.)
 - an outer message and inner message -- the inner message would be shown with some sort of transition on click, like the front and interior of a greeting card
 
 Discuss as a team how you will implement this and make a plan that makes sense to everyone.
