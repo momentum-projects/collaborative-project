@@ -4,11 +4,11 @@
 
 ## Description & Overview
 
-Imagine a social network, like Twitter or Facebook. Imagine electronic greeting cards. Now imagine them together -- that's what you are building as a group in this project.
+Imagine a social network, like Twitter or Instagram. Imagine electronic greeting cards. Now imagine them together -- that's what you are building as a group in this project.
 
 The social e-cards application lets users sign up, create greeting cards, and follow each other. A user can see cards shown from newest to oldest: they can see a collection of their own cards, a collection of cards by users they follow, and a collection of all cards.
 
-Your application is really two applications -- a back-end API written with Django REST Framework and a front-end React application. The back-end API should be deployed on [Render](https://render.com/) and the front-end app should be deployed on [Netlify](https://www.netlify.com/).
+Your application is really two applications -- a back-end API written with Django REST Framework and a front-end React application. The back-end API should be deployed on [Render](https://render.com/) and the front-end app should be deployed on [Netlify](https://www.netlify.com/). The front-end will make AJAX requests to the back-end to power the application in the browser.
 
 ### Cards and Customizable Options
 
