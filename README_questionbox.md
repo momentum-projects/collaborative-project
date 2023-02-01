@@ -87,7 +87,7 @@ You can design your front-end to have whatever components you think are necessar
 
 ### Authenticating from the front-end
 
-Your back-end dev(s) will show you how authentication works with Django REST Framework. What you will need to do is get an authentication token from the back-end (usually via POST to a URL like `/api/auth/token/login/`) and [store that token in localStorage](https://programmingwithmosh.com/react/localstorage-react/) for use on later requests.
+Your back-end dev(s) will show you how authentication works with Django REST Framework. What you will need to do is get an authentication token from the back-end (usually via POST to a URL like `/api/auth/token/login/`) and [store that token in localStorage](https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/) for use on later requests.
 
 ### Design
 
