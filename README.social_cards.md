@@ -1,6 +1,11 @@
+<!-- markdown-int-disable MD024 -->
 # Social Cards
 
-**IMPORTANT**: Please read this document closely. Many resources are linked within it. Before starting on your project, assemble a list of the tasks you think you need to do and discuss how you will tackle these together. The front-end will need to make some basic [wireframes](https://www.orbitmedia.com/blog/7-reasons-to-wireframe/#:~:text=for%20your%20website.-,Wireframes%20are%20simple%20black%20and%20white%20layouts%20that%20outline%20the,focusing%20on%20a%20site's%20structure).
+**IMPORTANT**: Please read this document closely. Many crucial details are documented and resources are linked within it.
+
+Before starting on your project, assemble a list of the tasks you think you need to do and discuss how you will tackle these together. 
+
+**Before any code can be written**, the front-end will need to make some basic [wireframes](https://www.orbitmedia.com/blog/7-reasons-to-wireframe/#:~:text=for%20your%20website.-,Wireframes%20are%20simple%20black%20and%20white%20layouts%20that%20outline%20the,focusing%20on%20a%20site's%20structure) the back-end will need to plan how to model the data.
 
 ## Description & Overview
 
@@ -8,7 +13,7 @@ Imagine a social network, like Twitter or Instagram. Imagine electronic greeting
 
 The social cards application lets users sign up, create greeting cards, and follow each other. A user can see cards shown from newest to oldest: they can see a collection of their own cards, a collection of cards by users they follow, and a collection of all cards.
 
-Your application is really two applications -- a back-end API written with Django REST Framework and a front-end React application. The back-end API should be deployed on [Render](https://render.com/) and the front-end app should be deployed on [Netlify](https://www.netlify.com/).
+Your application is really two applications -- a back-end API written with Django REST Framework and a front-end React application. These applications will communicate via requests from the front-end and responses from the back-end. The back-end API should be deployed on [Render](https://render.com/) and the front-end app should be deployed on [Netlify](https://www.netlify.com/).
 
 ### Cards and Customizable Options
 
@@ -99,13 +104,15 @@ As for how all of this should look, that is up to you! We are not providing wire
 
 During development of the front-end, you will want to be able to make requests before the API is complete. You can handle this in a few ways.
 
-One way is to make functions or methods for all your API calls, but instead of having them actually make the calls at first, have them set the data you are expecting without actually making an API call. Another way is to use the provided exported mock API specification for [Mockoon](https://mockoon.com/), a tool that will run a mock server for you. You will need to [download Mockoon](https://mockoon.com/download/) and open [the file provided in this repo](social-cards-mockoon.json) (in Mockoon, select "Open environment" from the File menu). Here is documentation on [getting started with Mockoon](https://mockoon.com/tutorials/getting-started/). Here is [documentation on making API calls from your React app to Mockoon](https://mockoon.com/tutorials/react-api-call-and-mocking/).
+One way is to make functions for all your API calls, but instead of having them actually make the calls at first, have them set the data you are expecting without actually making an API call.
 
-If you use Mockoon, you may want to be able to switch which server you use based on the environment your code is running in. To learn about how to access your data based on environment, [read this article on create-react-app-environments](https://medium.com/@tacomanator/environments-with-create-react-app-7b645312c09d).
+Another way is to use the provided exported mock API specification for [Mockoon](https://mockoon.com/), a tool that will run a mock server for you in your development environment (locally, on your computer). You will need to [download Mockoon](https://mockoon.com/download/) and open [the file provided in this repo](social-cards-mockoon.json) (in Mockoon, select "Open environment" from the File menu). In Mockoon, you click the "play" icon to start the server and use the provided url to access the mock API.
+
+Here is documentation on [getting started with Mockoon](https://mockoon.com/tutorials/getting-started/). Here is [documentation on making API calls from your React app to Mockoon](https://mockoon.com/tutorials/react-api-call-and-mocking/).
 
 You can [read more about approaches to building your front-end before the API is done in this dev.to article](https://dev.to/momentum/how-to-build-a-front-end-app-before-you-have-an-api-3ai3).
 
-You _can_ work with your backend dev(s) to get the back-end API running on your local machine, but you do not have to.
+You _can_ work with your backend dev(s) to get the back-end API running on your local machine, but this will take a bit of time. You do not have to do this.
 
 ## The Back-end Application
 
@@ -172,4 +179,4 @@ Be creative and make this project your own.
 
 CORS (Cross-Origin Resource Sharing) headers must be added to the response messages on the back-end so that the front-end app is allowed to interact with the API. This is [Read this blog post for more on how to set up CORS](https://www.stackhawk.com/blog/django-cors-guide). Back-end devs will want to use [`django-cors-headers`](https://github.com/adamchainz/django-cors-headers) and set `CORS_ALLOW_ALL_ORIGINS = True`.
 
-A gotcha for CORS on the front end is a missing trailing slash in your request URL. If CORS headers are set correctly on the backend but you are still getting a CORS error on the front end and it mentions a redirect, try adding a forward slash (`/`) to the end of the URL for the request that is failing.
+A gotcha for CORS on the front end is a missing trailing slash in your request URL. If CORS headers are set correctly on the backend but you are still getting a CORS error on the front end, and the error mentions a redirect, try adding a forward slash (`/`) to the end of the URL for the request that is failing.
